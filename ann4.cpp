@@ -101,7 +101,7 @@ int main () {
   readfile("training examples");
   while (mse > 0.001f) {
     float temp_mse = 0;
-    cout << "ITERATION: " << count << endl;
+    cout << "ITERATION: " << count << endl << endl;
   for (int i = 0; i < training_examples.size(); i++) {
   //  cout << training_examples[i][0] << " " << training_examples[i][1] << " " << training_examples[i][2] << " " << training_examples[i][3] << endl;
 
@@ -145,11 +145,10 @@ int main () {
     o_node.push_back(n2o);
     o_node.push_back(n3o);
     float output = node_output(o_node);
+    cout << "Inputs: x1=" << training_examples[i][0] << " x2=" << training_examples[i][1] << " x3=" << training_examples[i][2] << endl;
     cout << "Output: " << output <<  endl << "Target Output: " << training_examples[i][3] << endl;
 
     float o_error = output_node_error(output,training_examples[i][3]);
-
-    cout << "Output Error: " << o_error << endl << endl;
 
     pair <float,float> v1o(v1,o_error);
     pair <float,float> v2o(v2,o_error);
@@ -181,7 +180,9 @@ int main () {
     temp_mse += pow((training_examples[i][3] - output),2);
   }
   mse = temp_mse/training_examples.size();
-  cout << "MSE: " << mse << endl;
+  cout << endl << "MSE: " << mse << endl;
+
+  cout << "========================================" << endl << endl;
   count++;
 }
 }
