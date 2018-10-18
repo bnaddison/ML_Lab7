@@ -1,0 +1,30 @@
+## ADDBRA001
+## Brandon Addison
+## CSC3022H
+## ML Lab 7
+
+Question 1: What is the minimum number of hidden layer nodes required
+for this multi-layered ANN to learn to solve the 3 parity XOR problem?
+
+Number of hidden nodes = 3
+
+=========================================================================
+
+Question 2: Devise a list of training examples to teach the ANN to solve
+the 3 parity XOR problem. How many training examples did it take for your
+ANN to correctly learn to solve the 3 parity XOR problem?
+
+Input 1:   Input 2:   Input 3:   Output:
+0          0          0          0
+0          0          1          1
+0          1          0          1
+0          1          1          0
+1          0          0          1
+1          0          1          0
+1          1          0          0
+1          1          1          1
+
+There are a total of 8 training examples in my list which allowed my ANN
+to correctly learn the XOR problem.
+
+========================================================================
